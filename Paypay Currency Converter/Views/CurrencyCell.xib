@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CurrencyCell" id="Ls0-tW-wQ0" customClass="CurrencyCell" customModule="Paypay_Currency_Converter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="137" height="137"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hxR-jQ-w74">
+                <rect key="frame" x="0.0" y="0.0" width="137" height="137"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOY-Pw-SzZ">
+                        <rect key="frame" x="0.0" y="0.0" width="137" height="137"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eWc-2l-dF5">
+                                <rect key="frame" x="0.0" y="36" width="137" height="65.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eut-qq-dt7">
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MfP-ke-gKG">
+                                        <rect key="frame" x="0.0" y="30.5" width="137" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eWc-2l-dF5" secondAttribute="trailing" id="LRq-tG-e6v"/>
+                            <constraint firstItem="eWc-2l-dF5" firstAttribute="centerY" secondItem="jOY-Pw-SzZ" secondAttribute="centerY" id="hiE-F0-gJh"/>
+                            <constraint firstItem="eWc-2l-dF5" firstAttribute="leading" secondItem="jOY-Pw-SzZ" secondAttribute="leading" id="lEo-kp-cRC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jOY-Pw-SzZ" secondAttribute="trailing" id="6ec-9B-qRR"/>
+                    <constraint firstItem="jOY-Pw-SzZ" firstAttribute="leading" secondItem="hxR-jQ-w74" secondAttribute="leading" id="UNh-gf-2x3"/>
+                    <constraint firstItem="jOY-Pw-SzZ" firstAttribute="top" secondItem="hxR-jQ-w74" secondAttribute="top" id="cgW-nF-fpo"/>
+                    <constraint firstAttribute="bottom" secondItem="jOY-Pw-SzZ" secondAttribute="bottom" id="dLR-Q7-LMD"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="137" height="132"/>
+            <connections>
+                <outlet property="currencyAmountLbl" destination="MfP-ke-gKG" id="gkl-M0-QXV"/>
+                <outlet property="currencyNameLbl" destination="Eut-qq-dt7" id="PBT-4w-sX9"/>
+                <outlet property="holderView" destination="jOY-Pw-SzZ" id="HV2-xi-GWk"/>
+            </connections>
+            <point key="canvasLocation" x="632.60869565217399" y="85.044642857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
